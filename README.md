@@ -3,8 +3,8 @@ Loads text from file and fulfills table with it
 
 Example of Qml interface with Cpp background usage.
 main.cpp contains main function, that creates UI window, background worker object and establishes all connections between them, using signals and slots.
-Backend (cpp/h) - class, that reads text from text file line by line (in stream), splits it to a separate parts and sends them with signal called "cppSendDict".
-main.qml holds all interface: mainWindow, fileDialog window, tableView and button in a columnLayout.
+Backend (cpp/h) - class, that reads text from text file line by line (in stream), splits it to a separate parts and sends them with signal.
+main.qml holds all the interface: mainWindow, fileDialog window, tableView and button in a columnLayout.
 
 ![ui](https://github.com/Nonmant/Qml-C-Simple-TableView/blob/master/QtQuickSimpleUI.png?raw=true)
 
