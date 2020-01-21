@@ -14,6 +14,9 @@ Programm work sequence step by step:
 3. On successful acception on file, onAccepted event handler of fileDialog called. Within it called signal qmlFilePathAccepted that transmits choosen url to Backend object.
 4. Backend object in a corresponding slot opens file, begin to read it line by line. Each line transmitted to processFileLine function, that separates it by semicolon char. Strings from this line sends by cppSendDict to qmlGetDict signal.
 5. Signal handler onQmlGetDict attaches strings to listModel of the TableView.
+
 Besides that, on columns and table width change attached handler, that sets last column width in order to fit inside the table.
+
+
 No foolproof.
 Example file is [QtQuickSimpleTestFile.txt](https://github.com/Nonmant/Qml-C-Simple-TableView/blob/master/QtQuickSimpleTestFile.txt).
