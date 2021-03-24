@@ -18,8 +18,13 @@ void Backend::cppFilePath(QUrl path){
 
 void Backend::processFileLine(QString line){
  auto words=line.split(';', QString::SkipEmptyParts);
+ int count = 0;
  for(auto word:words){
      word=word.trimmed();
+     ++count;
  }
- cppSendDict(words[0], words[1], words[2]);
+ if(count == 3) // fix bug on dirtyDataText.txt
+ {
+   cppSendDict(words[0], words[1], words[2]);
+ }
 }
